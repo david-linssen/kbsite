@@ -3,7 +3,6 @@
 		"start": "run-p clean start:*",
 		"start:eleventy": "eleventy --serve",
 		"start:postcss": "postcss src/styles/*.css --dir _site --watch",
-		"container": "DEVCONTAINER=true run-p clean start:*",
         "quiet": "run-p clean quiet:*",
 		"quiet:eleventy": "eleventy --serve --quiet",
 		"quiet:postcss": "postcss src/styles/*.css --dir _site --watch",
@@ -31,6 +30,6 @@
 	},
 	"private": true,
 	"keywords": [],
-	"name": "kirkandblackbeard",
+	"name": "kbsite",
 	"description": ""
 }

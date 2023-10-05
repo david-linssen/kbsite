@@ -1,6 +1,6 @@
 ---
 layout: layouts/home.njk
-title: Kirk and Blackbeard
+title: Kirk & Blackbeard
 eleventyExcludeFromCollections: true
 pagination:
   data: collections.blogposts
@@ -16,33 +16,44 @@ pagination:
     </div>
 {% endif -%} #}
 
+<h1>Full Steam Ahead</h1>
+<p><img src="/images/KB Captains.svg" class="img-home" width="600" alt="Two captains on one ship"></p>
+<p>Great digital leadership is hard to find. If your project or product isn’t heading in the right direction, call someone who knows how to get stuff done.</p>
+<a href="mailto:captain@kirkandblackbeard.com?subject=Calling%20Kirk" class="cta-link">Call Kirk</a>
+
+<h2>Digital Leadership</h2>
+<p>Kirk & Blackbeard is your trusted source of digital leadership. Our leaders—seasoned industry veterans— bring strategic thinking, creative problem-solving, and perseverance to lead your design-, product-, technology- and digital marketing teams towards results.</p> 
+<p>Unsatisfied with the traditional landscape of agencies, consultancies and recruiters, we directly provide hands-on leadership and expert guidance for organizations seeking to craft and grow their digital products. We deliver better expertise and collaboration, faster than traditional partners, at similar pricing.</p>  
+<p>Our people become part of your crew, understanding your unique needs and providing tailored solutions to help you chart a course to digital success. In short: We get stuff done.</p>
+
 <h2>People</h2>
-<p>We are people, not AI's.</p>
+<p>We are people, not AIs.</p>
 
 <ul>
-    <li><a href="/people/david">David</a> - BumaStemra, Elsevier Health, Symphony</li>
-    <li><a href="/people/laurens">Laurens</a> - BumaStemra, Feelee, SmartOcto</li>
-    <li><a href="/people/antoine">Antoine</a> - Ahold, Nike</li>
-    <li><a href="/people/reinier">Reinier</a> - NOS, VWS, DPG</li>
-    <li><a href="/people/younes">Younes</a> - Symphony</li>
-    <li><a href="/people/laura">Laura</a> - ING, WPG, DPG</li>
+    <li><a href="/people/antoine/">Antoine Demmenie</a> - Albert Heijn, T-Mobile, Philips</li>
+    <li><a href="/people/reinier/">Reinier Ladan</a> - NOS, VWS, DPG</li>
+    <li><a href="/people/david/">David Linssen</a> - Schiphol, Elsevier, Symphony.live</li>
+    <li><a href="/people/laurens/">Laurens de Knijff</a> - BumaStemra, Feelee, SmartOcto</li>
+    <li><a href="/people/younes/">Younes Riad</a> - eBay, Kwantum/Leenbakker, Symphony.live</li>
 </ul>
 
-<h2>Blog</h2>
+{# <h2>Blog</h2>
 {% for post in postslist -%}
     <article class="in-list type-article">
         <h2>
             <a href="{{ post.url }}">{{ post.data.title }}</a>
         </h2>
         <p class="post-date">{{ post.date | readablePostDate }} &nbsp;&nbsp;&nbsp;&nbsp;✍️
-            <a href="https://reinierladan.nl">Reinier Ladan</a>
+            {{ post.data.author }}
         </p>
         {% if post.data.image %}
             <p><img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}"/></p>
         {% endif %}
         <div>{{ post.templateContent | safe }}</div>
     </article>
-{%- endfor -%}
+{%- endfor -%} #}
+
+
 {# <ol class="pagination">
     {%- for pageEntry in pagination.pages %}
         <li>

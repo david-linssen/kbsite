@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+img, svg {
+    display: inline-block;
+}
+
+
     @font-face {
         font-family: "SpaceGrotesk";
         src: url("/fonts/SpaceGrotesk-Regular.ttf");
@@ -47,12 +51,19 @@
         @apply font-kb-body;
     }
 
+
+@layer components {
+
     p {
-        @apply mb-4;
+        margin-bottom: 1rem;
     }
 
     header {
-        @apply mb-8;
+        @apply pt-8 font-kb-extras;
+    }
+
+    header p{
+        @apply text-center;
     }
 
     main,
@@ -85,11 +96,15 @@
     }
 
     main p > img {
-        @apply my-8;
+        @apply mb-4;
     }
 
     footer {
-        @apply border-t-4 mt-12 pt-8;
+        @apply border-t-2 mt-12 pt-8;
+    }
+
+    footer {
+         @apply text-center;
     }
 
     a {
@@ -146,9 +161,15 @@
         padding-right: 0.3em;
         padding-left: 0.3em;
     }
-}
 
-@layer components {
+    figcaption {
+        @apply text-sm pt-1;
+    }
+
+    figure {
+        @apply mb-8;
+    }
+
     .site-intro {
         @apply border border-kb-dark-tint bg-kb-light-tint/20 p-4;
     }
@@ -163,16 +184,12 @@
 
     /* NAV COMPONENT */
 
-    header {
-        @apply font-kb-extras;
-    }
-
     header nav {
         @apply p-4;
     }
 
     .nav-Menu {
-        @apply flex flex-row gap-4 lg:gap-12 pb-4;
+        @apply flex flex-row gap-4 lg:gap-12 py-4;
         justify-content: center;
     }
 
@@ -266,6 +283,19 @@
     .img-content-group img {
         @apply w-72 shadow-lg;
         display: inline-block;
+    }
+
+    .img-home {
+        aspect-ratio: 1.667;
+    }
+
+    .cta-link {
+        display: inline-block;
+        @apply bg-kb-alt-tint p-4 text-white font-kb-extras no-underline;
+    }
+
+    .cta-link:hover {
+        @apply text-white bg-black;
     }
 }
 

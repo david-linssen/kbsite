@@ -1,1 +1,1 @@
-{ "layout": "layouts/post.njk", "posttype": "blogpost" }
+{ "layout": "layouts/post.njk", "posttype": "blogpost", "activeNav": "blog" }

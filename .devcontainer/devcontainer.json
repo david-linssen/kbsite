@@ -4,7 +4,17 @@
     "forwardPorts": [
         3000
     ],
-    "postCreateCommand": "yarn install"
+	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"bradlc.vscode-tailwindcss",
+				"Compulim.compulim-vscode-closetag",
+				"ms-vscode-remote.remote-containers",
+				"vscode-icons-team.vscode-icons"
+			]
+		}
+	}
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
     // "remoteUser": "root"
 }
